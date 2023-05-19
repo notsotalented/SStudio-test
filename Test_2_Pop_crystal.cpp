@@ -20,10 +20,21 @@ int countExplodedGems(int rows, int cols, int gems[][3], int hits[])  {
     int target = gems[hits[0]][hits[1]];
     int pointer[2] = {0};
     
-    if (target == 1)
-        
+    if (target == 1) {
+        validPos[result].insert(hits[0]); validPos[result].insert(hits[1]);
         result+=1;
+    }   
     
+    /*for (int i = 0; i < 1; i++) {
+            cout << "Elements at index " << i << ": ";
+      
+            // Print the array of sets
+            for (auto x : validPos[i])
+                cout << x << " ";
+      
+            cout << endl;
+    }   */
+
     return result;
 }
 
